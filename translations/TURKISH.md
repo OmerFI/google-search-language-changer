@@ -1,5 +1,7 @@
 # Google Arama Dili Değiştirici
 
+<!-- markdownlint-disable MD033 -->
+
 ---
 
 <p align="center">

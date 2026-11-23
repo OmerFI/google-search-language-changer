@@ -1,5 +1,7 @@
 # Google Search Language Changer
 
+<!-- markdownlint-disable MD033 -->
+
 ---
 
 <p align="center">
