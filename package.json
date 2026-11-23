@@ -2,7 +2,7 @@
   "name": "google-search-language-changer",
   "description": "Quickly change your Google Search language preferences",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "devDependencies": {
     "@biomejs/biome": "^2.6.8",
