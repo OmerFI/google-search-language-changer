@@ -38,7 +38,8 @@ jobs:
           CHROME_PUBLISHER_ID: ${{ secrets.CHROME_PUBLISHER_ID }}
           CHROME_SERVICE_ACCOUNT_CLIENT_EMAIL: ${{ secrets.CHROME_SERVICE_ACCOUNT_CLIENT_EMAIL }}
           CHROME_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.CHROME_SERVICE_ACCOUNT_PRIVATE_KEY }}
-          FIREFOX_EXTENSION_ID: "{6fb0f31f-0a75-4b37-8db8-80c6fc8e3ff4}"
+          # AMO'daki sayısal ID; GUID verilirse araç süslü parantezleri silip 404 alıyor.
+          FIREFOX_EXTENSION_ID: "2734786"
           FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
           FIREFOX_JWT_SECRET: ${{ secrets.FIREFOX_JWT_SECRET }}
       - name: Create GitHub release
