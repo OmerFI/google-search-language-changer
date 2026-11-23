@@ -3,6 +3,8 @@ name: Release
 on:
   push:
     tags: ["v*"]
+  # Elle tetiklendiğinde mağazalara bir şey yüklenmez, yalnızca kimlik bilgileri denenir.
+  workflow_dispatch:
 
 jobs:
   release:
@@ -18,6 +20,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Check that the tag matches package.json
+        if: github.event_name == 'push'
         run: test "v$(jq -r .version package.json)" = "$GITHUB_REF_NAME"
       - run: pnpm zip
       - run: pnpm zip:firefox
@@ -25,6 +28,7 @@ jobs:
       - name: Submit to Chrome Web Store and Firefox Add-ons
         run: >-
           pnpm exec wxt submit
+          ${{ github.event_name == 'workflow_dispatch' && '--dry-run' || '' }}
           --chrome-zip .output/*-chrome.zip
           --firefox-zip .output/*-firefox.zip
           --firefox-sources-zip .output/*-sources.zip
@@ -38,6 +42,7 @@ jobs:
           FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
           FIREFOX_JWT_SECRET: ${{ secrets.FIREFOX_JWT_SECRET }}
       - name: Create GitHub release
+        if: github.event_name == 'push'
         run: gh release create "$GITHUB_REF_NAME" .output/*.zip --generate-notes
         env:
           GH_TOKEN: ${{ github.token }}
