@@ -22,10 +22,6 @@ Translations:
 
 **Google Search Language Changer** is an extension that allows you to quickly change your Google Search language preferences such as **pages in the specified language** and **web interface language**.
 
-<!--
-[![Version](https://img.shields.io/badge/Version-v1.0-orange)]()
-[![License](https://img.shields.io/badge/License-MIT-green)]() -->
-
 ---
 
 ## Explanation
