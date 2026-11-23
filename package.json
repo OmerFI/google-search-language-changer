@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "type": "module",
   "devDependencies": {
+    "@biomejs/biome": "^2.6.8",
     "typescript": "^7.0.2",
     "wxt": "^0.21.5"
   },
@@ -16,6 +17,7 @@
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
     "compile": "tsc --noEmit",
+    "check": "biome check",
     "postinstall": "wxt prepare"
   },
   "packageManager": "pnpm@12.23.0"
