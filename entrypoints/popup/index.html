@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="changer.css" />
+    <title>Google Search Language Changer</title>
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,22 +24,22 @@
               <div class="button-container">
                 <button
                   class="english"
-                  data-type="interface"
-                  data-language="english"
+                  data-param="hl"
+                  data-language="en"
                   data-i18n="popupLanguageButton1Text"
                 >
                   English
                 </button>
                 <button
                   class="turkish"
-                  data-type="interface"
-                  data-language="turkish"
+                  data-param="hl"
+                  data-language="tr"
                   data-i18n="popupLanguageButton2Text"
                 >
                   Türkçe
                 </button>
               </div>
-              <i class="fa fa-refresh restart" data-type="reset-interface"></i>
+              <i class="fa fa-refresh restart" data-reset="hl"></i>
             </div>
           </div>
           <div class="specified-language">
@@ -49,16 +50,16 @@
               <div class="button-container">
                 <button
                   class="english"
-                  data-type="specified-language"
-                  data-language="english"
+                  data-param="lr"
+                  data-language="en"
                   data-i18n="popupLanguageButton1Text"
                 >
                   English
                 </button>
                 <button
                   class="turkish"
-                  data-type="specified-language"
-                  data-language="turkish"
+                  data-param="lr"
+                  data-language="tr"
                   data-i18n="popupLanguageButton2Text"
                 >
                   Türkçe
@@ -67,13 +68,13 @@
 
               <i
                 class="fa fa-refresh restart"
-                data-type="reset-specified-language"
+                data-reset="lr"
               ></i>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <script src="changer.js"></script>
+    <script type="module" src="./main.ts"></script>
   </body>
 </html>
