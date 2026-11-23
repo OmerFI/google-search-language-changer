@@ -1,5 +1,6 @@
 .vscode/
-*/web-ext-artifacts/
-chrome.crx
-chrome.pem
-chrome.zip
+node_modules/
+.output/
+.wxt/
+web-ext.config.ts
+.env.submit

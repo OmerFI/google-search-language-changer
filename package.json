@@ -1,0 +1,28 @@
+{
+  "name": "google-search-language-changer",
+  "description": "Quickly change your Google Search language preferences",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.8",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1",
+    "web-ext": "^10.8.0",
+    "wxt": "^0.21.5"
+  },
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "tsc --noEmit",
+    "check": "biome check",
+    "test": "vitest run",
+    "postinstall": "wxt prepare",
+    "lint:firefox": "web-ext lint -s .output/firefox-mv3"
+  },
+  "packageManager": "pnpm@12.23.0"
+}
